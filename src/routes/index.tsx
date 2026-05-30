@@ -1,29 +1,61 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { Stats } from "@/components/site/Stats";
+import { Modalities } from "@/components/site/Modalities";
+import { WhyChoose } from "@/components/site/WhyChoose";
+import { About } from "@/components/site/About";
+import { Results } from "@/components/site/Results";
+import { Pricing } from "@/components/site/Pricing";
+import { Gallery } from "@/components/site/Gallery";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Academic Scarlet — Academia em Belo Horizonte | Treine Forte" },
+      {
+        name: "description",
+        content:
+          "Academia em Belo Horizonte com musculação, CrossFit, funcional, spinning e MMA. Estrutura completa, professores qualificados e resultados reais. Agende sua aula gratuita.",
+      },
+      { property: "og:title", content: "Academic Scarlet — Academia em Belo Horizonte" },
+      {
+        property: "og:description",
+        content: "Treine forte. Evolua todos os dias. Aula gratuita disponível.",
+      },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap",
+      },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Stats />
+        <Modalities />
+        <WhyChoose />
+        <About />
+        <Results />
+        <Pricing />
+        <Gallery />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
