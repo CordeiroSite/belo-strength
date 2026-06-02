@@ -65,7 +65,7 @@ export function Pricing() {
               }`}
             >
               {p.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-white px-4 py-1.5 text-[10px] uppercase font-display font-extrabold tracking-widest flex items-center gap-1">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-secondary border-2 border-secondary px-4 py-1.5 text-[10px] uppercase font-display font-extrabold tracking-widest flex items-center gap-1">
                   <Star className="w-3 h-3 fill-current" /> Mais Popular
                 </div>
               )}
