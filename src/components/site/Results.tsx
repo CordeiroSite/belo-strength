@@ -8,21 +8,21 @@ const results = [
 
 export function Results() {
   return (
-    <section className="relative bg-background py-24 md:py-32 overflow-hidden">
+    <section className="relative bg-secondary py-24 md:py-32 overflow-hidden">
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{ background: "var(--gradient-primary)" }}
       />
       <div className="container mx-auto px-5">
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="text-secondary font-bold text-xs uppercase tracking-[0.3em]">
+          <span className="text-primary font-bold text-xs uppercase tracking-[0.3em]">
             Resultados Reais
           </span>
-          <h2 className="font-display font-extrabold text-foreground text-4xl md:text-6xl mt-3 leading-[0.95]">
+          <h2 className="font-display font-extrabold text-white text-4xl md:text-6xl mt-3 leading-[0.95]">
             TRANSFORMAÇÕES QUE <br />
-            <span className="text-secondary">FALAM POR SI.</span>
+            <span className="text-primary">FALAM POR SI.</span>
           </h2>
-          <p className="text-muted-foreground mt-5">
+          <p className="text-white/70 mt-5">
             Nossos alunos provam todos os dias: com método e consistência,
             qualquer meta é possível.
           </p>
@@ -34,17 +34,17 @@ export function Results() {
             return (
               <div
                 key={r.title}
-                className="group relative bg-dark text-white p-9 overflow-hidden hover:bg-secondary transition-colors"
+                className="group relative bg-dark text-white p-9 overflow-hidden hover:bg-primary hover:text-secondary transition-colors"
               >
-                <div className="absolute top-0 right-0 w-28 h-28 -translate-y-10 translate-x-10 rounded-full bg-primary/10 group-hover:bg-primary/30 transition-colors" />
-                <Icon className="w-8 h-8 text-primary mb-6" strokeWidth={2.2} />
-                <div className="font-display font-extrabold text-primary text-6xl md:text-7xl leading-none">
+                <div className="absolute top-0 right-0 w-28 h-28 -translate-y-10 translate-x-10 rounded-full bg-primary/10 group-hover:bg-secondary/20 transition-colors" />
+                <Icon className="w-8 h-8 text-primary group-hover:text-secondary mb-6 transition-colors" strokeWidth={2.2} />
+                <div className="font-display font-extrabold text-primary group-hover:text-secondary text-6xl md:text-7xl leading-none transition-colors">
                   {r.big}
                 </div>
                 <div className="font-display font-extrabold uppercase text-lg mt-4">
                   {r.title}
                 </div>
-                <p className="text-white/60 text-sm mt-2">{r.desc}</p>
+                <p className="text-white/60 group-hover:text-secondary/80 text-sm mt-2 transition-colors">{r.desc}</p>
               </div>
             );
           })}

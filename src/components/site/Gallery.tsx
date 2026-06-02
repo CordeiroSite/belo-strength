@@ -16,18 +16,18 @@ const imgs = [
 
 export function Gallery() {
   return (
-    <section id="galeria" className="bg-background py-24 md:py-32">
+    <section id="galeria" className="bg-secondary py-24 md:py-32">
       <div className="container mx-auto px-5">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
           <div>
-            <span className="text-secondary font-bold text-xs uppercase tracking-[0.3em]">
+            <span className="text-primary font-bold text-xs uppercase tracking-[0.3em]">
               Galeria
             </span>
-            <h2 className="font-display font-extrabold text-foreground text-4xl md:text-6xl mt-3 leading-[0.95]">
+            <h2 className="font-display font-extrabold text-white text-4xl md:text-6xl mt-3 leading-[0.95]">
               ENERGIA QUE <span className="text-primary">CONTAGIA.</span>
             </h2>
           </div>
-          <p className="text-muted-foreground md:max-w-sm">
+          <p className="text-white/70 md:max-w-sm">
             Um espaço pensado para você quebrar limites todos os dias.
           </p>
         </div>
